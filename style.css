@@ -1,0 +1,118 @@
+/* https://coolors.co/e9dedb-757083-92b4a7-93827f-bdc4a7 */
+
+body {
+  color: #757083;
+  background-color: #e9dedb;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  font-size: calc(3em + 1vw);
+}
+
+
+@media(hover) {
+  body {
+    font-size: calc(1em + 1vw);
+  }
+
+  video {
+    max-height: 600px;
+  }
+
+  #menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+h1 {
+  font-size: 120%;
+  font-weight: 700;
+}
+
+p {
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+#container {
+  align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+#menu {
+  font-weight: 700;
+}
+
+.smiley {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-property: color;
+}
+
+.smiley:hover {
+  color: rgb(146, 180, 167);
+}
+
+.smile {
+  font-family: monospace, "Fira Code", sans-serif;
+}
+
+#footer {
+  font-size: 70%;
+}
+
+img {
+  width: 100%;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.videoContainer {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+a:link {
+  color: #757083;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(146, 180, 167);
+}
+
+a:active {
+  text-decoration: none;
+}
+
+*:focus {
+  outline-style: none;
+}
+
+::selection {
+  background: rgba(146, 180, 167, 0.99);
+  color: #e9dedb;
+}
+
+::-moz-selection {
+  background: rgba(146, 180, 167, 0.99);
+  color: #e9dedb;
+}
+

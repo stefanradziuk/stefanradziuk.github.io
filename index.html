@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stefan Radziuk</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hi! I'm a Computing student at Imperial College London">
+    <meta name="viewport" content="user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="media/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      var videos = [
+        "kitten"
+      , "parrot"
+      , "birb"
+      , "crows"
+      , "donkey"
+      , "cuddles"
+      , "petting"
+      , "kittenSlide"]
+      function getRandomVideo() {
+        var video = "<div class=\"videoContainer\"><video controls loop><source src=\"media/";
+        var randomVid = videos[Math.floor(Math.random() * videos.length)];
+        video += randomVid + ".webm\" type=\"video/webm\"></video></div>";
+        return video;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Hi! <span class="smiley">•<span class="smile">&#7447;</span>•</span></h1>
+      <p>I'm Stefan, I study Computing at Imperial College London</p>
+      <p id="menu">
+        <a href="StefanRadziukCv.pdf" target="_blank">
+          cv</a> |
+        <a href="https://github.com/stefanradziuk" target="_blank">
+          gitHub</a> |
+        <a href="https://linkedin.com/in/stefanradziuk" target="_blank">
+          linkedIn</a> |
+        <a href="mailto:stefan@radziuk.pl">
+          stefan@radziuk.pl
+        </a>
+      </p>
+      <p>
+        Here's a cute video for you:
+      </p>
+      <script type="text/javascript">
+        document.write(getRandomVideo());
+      </script>
+      <div id="footer">
+        <span class="smiley">•<span class="smile">&#7447;</span>•</span>
+      </div>
+    </div>
+  </body>
+</html>
