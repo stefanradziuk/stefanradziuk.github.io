@@ -1,9 +1,15 @@
 /* https://coolors.co/e9dedb-757083-92b4a7-93827f-bdc4a7 */
 
+:root {
+  --background: #e9dedb;
+  --primary: #757083;
+  --accent: rgba(146, 180, 167, 0.99);
+}
+
 body {
-  color: #757083;
-  background-color: #e9dedb;
-  font-family: "Fira Code", monospace;
+  color: var(--primary);
+  background-color: var(--background);
+  font-family: "Fira Code", monospace; 
   font-weight: 300;
   font-size: calc(3em + 1vw);
 }
@@ -109,12 +115,12 @@ a:active {
 }
 
 ::selection {
-  background: rgba(146, 180, 167, 0.99);
-  color: #e9dedb;
+  background: var(--accent);
+  color: var(--background);
 }
 
 ::-moz-selection {
-  background: rgba(146, 180, 167, 0.99);
-  color: #e9dedb;
+  background: var(--accent);
+  color: var(--background);
 }
 
