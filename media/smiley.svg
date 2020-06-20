@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" class="smiley" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 196.1 196.1" style="enable-background:new 0 0 196.1 196.1;" xml:space="preserve">
+<svg version="1.1" class="smiley_svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 196.1 196.1" style="enable-background:new 0 0 196.1 196.1;" xml:space="preserve">
 <style type="text/css">
 :root {
   --background: #fafafa;
   --primary: #111;
   --accent: #5762d5;
-  --accent-transparent: rgba(87, 98, 213, .99);
-  --gray: #ddd;
-
-  --serif: 'Merriweather', serif;
-  --sans: 'Montserrat', sans-serif;
-
   --woke: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z");
   --wink: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6c-2.9-9.6-5.7-18.8-10.2-28.2 l18.8-6.2C104.5,62.8,108.2,73.3,111.1,83.1z");
 }
@@ -35,21 +29,17 @@
   }
 }
 
-.smiley path {
-  animation: 1s ease-in 0s 1 blinker;
-	transition: d 0.2s ease-in, fill 0.5s ease-in;
+.smiley_svg path {
+  animation: 1s ease-out 0s 1 blinker;
+	transition: d 0.2s ease-out, fill 0.5s ease-out;
   fill: var(--primary);
   d: var(--woke);
 }
 
-.smiley:hover path {
+.smiley_svg:hover path {
 	fill: var(--accent);
 	d: var(--wink);
 }
 </style>
-<g id="XMLID_1_">
-<g>
-<path id="XMLID_35_" class="st0" d=" M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z"/>
-</g>
-</g>
+<path id="XMLID_35_" class="st0" d="M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z"/>
 </svg>
