@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!DOCTYPE svg PUBLIC “-//W3C//DTD SVG 1.1//EN”
+“http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”>
 <html>
   <head>
     <title>Stefan Radziuk</title>
@@ -6,8 +8,9 @@
     <meta name="description" content="Hi! I'm a Computing student at Imperial College London">
     <meta name="viewport" content="user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="media/icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/favicon_black.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
     <!--facebook meta tags-->
     <meta property="og:url" content="https://stefan.radzi.uk/"/>
     <meta property="og:type" content="website"/>
@@ -17,55 +20,81 @@
     <script type="text/javascript">
       var videos = [
         "kitten"
-      , "parrot"
-      , "birb"
-      , "cuddles"
-      , "petting"
-      , "kittenSlide"
-      , "bulldog"
-      , "ocelot"
-      , "cheetahs"
-      , "walkin"]
-      function getRandomVideo() {
-        var video = "<div class=\"videoContainer\"><video controls loop><source src=\"media/";
-        var randomVid = videos[Math.floor(Math.random() * videos.length)];
-        video += randomVid + ".webm\" type=\"video/webm\"></video></div>";
-        return video;
-      }
-      </script>
-      <!-- retired videos: "crows", "donkey" -->
+        , "parrot"
+        , "birb"
+        , "cuddles"
+        , "petting"
+        , "kittenSlide"
+        , "bulldog"
+        , "ocelot"
+        , "cheetahs"
+        , "walkin"]
+function getRandomVideo() {
+  var video = "<div class=\"videoContainer\"><video controls loop><source src=\"media/";
+  var randomVid = videos[Math.floor(Math.random() * videos.length)];
+  video += randomVid + ".webm\" type=\"video/webm\"></video></div>";
+  return video;
+}
+    </script>
+    <!-- retired videos: "crows", "donkey" -->
   </head>
   <body>
     <div id="container">
-      <h1>Hi! <span class="smiley">•<span class="smile">&#7447;</span>•</span></h1>
+      <!--<h1>Hi! <span class="smiley">ツ</span></h1>-->
+      <h1>
+        Hi!
+        <svg version="1.1" id="Layer_1" class="smiley" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.1 196.1">
+          <path/>
+        </svg>
+      </h1>
       <p>I'm Stefan, I study Computing at Imperial College London</p>
-      <p id="menu">
-        <a href="StefanRadziukCv.pdf" target="_blank">
-          cv</a> |
-        <a href="https://github.com/stefanradziuk" target="_blank">
-          gitHub</a> |
-        <a href="https://linkedin.com/in/stefanradziuk" target="_blank">
-          linkedIn</a> |
-        <a href="mailto:stefan@radziuk.pl">
-          stefan@radziuk.pl
-        </a>
+      <ul id="menu">
+        <li>
+          <a href="StefanRadziukCv.pdf" target="_blank">
+            cv</a>
+        </li>
+        <span class="separator">\</span>
+        <li>
+          <a href="https://github.com/stefanradziuk" target="_blank">
+            gitHub</a>
+        </li>
+        <span class="separator">\</span>
+        <li>
+          <a href="https://linkedin.com/in/stefanradziuk" target="_blank">
+            linkedIn</a>
+        </li>
+        <span class="separator">\</span>
+        <li>
+          <a href="mailto:stefan@radzi.uk">
+            stefan@radzi.uk</a>
+        </li>
+      </ul>
+      <p>
+      Have a look at how my colleagues and I <a href="https://github.com/ic-pcg/waveFunctionCollapse">implemented the wave&nbsp;function&nbsp;collapse algorithm in C</a>
+      <div class="videoContainer">
+        <video playsinline autoplay muted loop>
+          <source src="media/wfc_demo.webm" type="video/webm">
+        </video>
+      </div>
       </p>
       <p>
-        Check out the epidemic simulator I made <a href="https://github.com/stefanradziuk/population_simulator/">over here</a>
-        <div class="videoContainer">
-          <video playsinline autoplay muted loop>
-            <source src="media/population_simulator_demo.webm" type="video/webm">
-          </video>
-        </div>
+      Check out the epidemic simulator I made in Python <a href="https://github.com/stefanradziuk/population_simulator/">over&nbsp;here</a>
+      <div class="videoContainer">
+        <video playsinline autoplay muted loop>
+          <source src="media/population_simulator_demo.webm" type="video/webm">
+        </video>
+      </div>
       </p>
       <p>
-        Here's a cute video for you:
+      Here's a cute video for you:
       </p>
       <script type="text/javascript">
         document.write(getRandomVideo());
       </script>
       <div id="footer">
-        <span class="smiley">•<span class="smile">&#7447;</span>•</span>
+        <svg version="1.1" id="Layer_1" class="smiley" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.1 196.1">
+          <path/>
+        </svg>
       </div>
     </div>
   </body>

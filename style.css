@@ -1,73 +1,56 @@
 /* https://coolors.co/e9dedb-757083-92b4a7-93827f-bdc4a7 */
 
 :root {
-  --background: #e9dedb;
-  --primary: #757083;
-  --accent: rgba(146, 180, 167, 0.99);
+  --background: #fafafa;
+  --primary: #111;
+  --accent: #5762d5;
+  --accent-transparent: rgba(87, 98, 213, .99);
+  --gray: #ddd;
+
+  --serif: 'Merriweather', serif;
+  --sans: 'Montserrat', sans-serif;
 }
 
 body {
   color: var(--primary);
   background-color: var(--background);
-  font-family: "Fira Code", monospace; 
-  font-weight: 300;
+  font-family: var(--sans);
+  font-weight: 400;
   font-size: calc(3em + 1vw);
-}
-
-
-@media(hover) {
-  body {
-    font-size: calc(1em + 1vw);
-  }
-
-  video {
-    max-height: 600px;
-  }
-
-  #menu {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 h1 {
   font-size: 120%;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: var(--serif);
 }
 
 p {
-  font-size: 100%;
+  font-size: 85%;
   line-height: 1.2;
 }
 
 #container {
-  align: center;
-  max-width: min(800px, 90%);
+  max-width: min(900px, 90%);
   margin: 0 auto;
   padding: 20px 50px 20px 50px;
 }
 
 #menu {
-  font-weight: 700;
+  list-style: none;
+  font-weight: 900;
+  font-family: var(--serif);
+  display: flex;
+  flex-direction: column;
 }
 
-.smiley {
-  font-weight: 700;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-  transition-property: color;
-}
-
-.smiley:hover {
-  color: rgb(146, 180, 167);
-}
-
-.smile {
-  font-family: monospace, "Fira Code", sans-serif;
+.separator {
+  display: none;
 }
 
 #footer {
   font-size: 70%;
+  margin-bottom: 2.5em;
 }
 
 img {
@@ -86,13 +69,21 @@ img {
 }
 
 video {
+  max-width: 100%;
   display: block;
   margin: 0 auto;
 }
 
+a:link, .smiley {
+  color: var(--primary);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-property: color;
+}
+
 a:link {
-  color: #757083;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: var(--serif);
   text-decoration: none;
 }
 
@@ -103,7 +94,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: rgb(146, 180, 167);
+  color: var(--accent);
 }
 
 a:active {
@@ -115,12 +106,80 @@ a:active {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--accent-transparent);
   color: var(--background);
 }
 
 ::-moz-selection {
-  background: var(--accent);
+  background: var(--accent-transparent);
   color: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: auto;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+}
+
+@media(hover) {
+  body {
+    font-size: calc(1em + 1vw);
+  }
+
+  video {
+    max-height: 600px;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: row;
+    item-width: 100%;
+    justify-content: space-between;  /* flex-start */
+  }
+
+  .separator {
+    display: inline;
+  }
+}
+
+@keyframes blinker {
+  0% { 
+    d: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z");
+  }
+
+  50% { 
+	fill: var(--accent);
+    d: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6c-2.9-9.6-5.7-18.8-10.2-28.2 l18.8-6.2C104.5,62.8,108.2,73.3,111.1,83.1z");
+  }
+
+  100% { 
+    d: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z");
+  }
+}
+
+.smiley {
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+	max-height: 1.3em;
+	max-width: 1.3em;
+  float: right;
+}
+
+.smiley path {
+  animation: 1s ease-in 0s 1 blinker;
+	transition: d 0.2s ease-in, fill 0.5s ease-in;
+  fill: var(--primary);
+  d: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z");
+}
+
+.smiley:hover path {
+	fill: var(--accent);
+	d: path("M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6c-2.9-9.6-5.7-18.8-10.2-28.2 l18.8-6.2C104.5,62.8,108.2,73.3,111.1,83.1z");
 }
 
