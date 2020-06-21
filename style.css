@@ -1,5 +1,3 @@
-/* https://coolors.co/e9dedb-757083-92b4a7-93827f-bdc4a7 */
-
 :root {
   --background: #fafafa;
   --primary: #111;
@@ -7,8 +5,8 @@
   --accent-transparent: rgba(87, 98, 213, .99);
   --gray: #ddd;
 
-  --serif: 'Merriweather', serif;
   --sans: 'Montserrat', sans-serif;
+  --serif: 'Merriweather', serif;
 }
 
 body {
@@ -75,7 +73,7 @@ video {
   margin: 0 auto;
 }
 
-a:link, .smiley {
+a:link {
   color: var(--primary);
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
