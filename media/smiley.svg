@@ -11,35 +11,56 @@
 }
 
 .obj0{
-  fill: var(--primary);
+fill: var(--primary);
 }
 
 @keyframes blinker {
   0% { 
-    d: var(--woke);
+d: var(--woke);
   }
 
   50% { 
-    fill: var(--accent);
-    d: var(--wink);
+fill: var(--accent);
+d: var(--wink);
   }
 
   100% { 
-    d: var(--woke);
+d: var(--woke);
   }
 }
 
 .smiley_svg path {
-  animation: 1s ease-out 0s 1 blinker;
-	transition: d 0.2s ease-out, fill 0.5s ease-out;
-  fill: var(--primary);
-  d: var(--woke);
+animation: 1s ease-out 0.5s 1 blinker;
+transition: d 0.2s ease-out, fill 0.5s ease-out;
+fill: var(--primary);
+d: var(--woke);
 }
 
 .smiley_svg:hover path {
-	fill: var(--accent);
-	d: var(--wink);
+fill: var(--accent);
+d: var(--wink);
+}
+
+.invisible {
+  fill: rgba(255, 255, 255, 0);
+  stroke: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+path.dark-mode {
+  fill: var(--background);
 }
 </style>
 <path id="XMLID_35_" class="obj0" d="M70.9,94.2l-19.4,7.1c-3-9.8-13-34.5-17.3-42.6L53.4,52C58.1,61.5,67.4,84,70.9,94.2z M164,54.7c-1.5,3.8-2.9,8.3-3.8,11.8c-4.2,16.3-12.8,40.2-25.3,56.7c-15.8,20.8-37.7,36-59.2,44.2l-16.9-16.9 c20.6-5.9,44.2-19.4,59.5-38.9c12.4-15.7,20.9-42.6,23.2-63.3L164,54.7z M111.1,83.1l-19,6.6C89.2,80.1,81,58.2,76.4,48.9 l18.8-6.2C99,50.1,108.2,73.3,111.1,83.1z"/>
+<rect width="1000" height="1000" onclick="myFunction()" class="invisible"/>
+<script>
+function myFunction() {
+  window.top.document.body.classList.toggle("dark-mode");
+  var smileys = window.top.document.getElementsByClassName("smiley");
+  console.log(smileys);
+  Array.prototype.forEach.call(smileys, smiley => {
+      smiley.contentWindow.document.getElementById("XMLID_35_").classList.toggle("dark-mode");
+  })
+}
+</script>
 </svg>

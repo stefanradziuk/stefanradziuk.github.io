@@ -15,6 +15,12 @@ body {
   font-family: var(--sans);
   font-weight: 400;
   font-size: calc(3em + 1vw);
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+}
+
+.dark-mode {
+  background-color: var(--primary);
+  color: var(--background);
 }
 
 h1 {
@@ -75,15 +81,10 @@ video {
 
 a:link {
   color: var(--primary);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-  transition-property: color;
-}
-
-a:link {
   font-weight: 900;
   font-family: var(--serif);
   text-decoration: none;
+  transition: color 0.5s ease-out;
 }
 
 a:visited {
@@ -91,8 +92,16 @@ a:visited {
   text-decoration: none;
 }
 
+.dark-mode a:link {
+  color: var(--background);
+}
+
 a:hover {
   text-decoration: none;
+  color: var(--accent);
+}
+
+.dark-mode a:hover {
   color: var(--accent);
 }
 
@@ -148,8 +157,22 @@ a:active {
 }
 
 .smiley {
-	max-height: 2.5em;
-	max-width: 2.5em;
+	min-height: 1.3em;
+	min-width: 1.3em;
   float: right;
 }
 
+.psst {
+  position: relative;
+  top: 6em;
+  font-size: 40%;
+  opacity: 0;
+  float: right;
+  animation: 5s ease-out 2.5s fade-in;
+}
+
+@keyframes fade-in {
+  10%, 90% { 
+    opacity: 0.6;
+  }
+}
