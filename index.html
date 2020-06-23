@@ -16,34 +16,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="media/favicon_black.png">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-      var videos = [
-        "kitten"
-        , "parrot"
-        , "birb"
-        , "cuddles"
-        , "petting"
-        , "kittenSlide"
-        , "bulldog"
-        , "ocelot"
-        , "cheetahs"
-        , "walkin"]
-function getRandomVideo() {
-  var video = "<div class=\"videoContainer\"><video controls loop><source src=\"media/";
-  var randomVid = videos[Math.floor(Math.random() * videos.length)];
-  video += randomVid + ".mp4\" type=\"video/mp4\"></video></div>";
-  return video;
-}
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
-  <body>
+  <body onload="writeRandomVideo();">
     <div id="container">
       <span class="psst">
         psst! check out the dark mode
       </span>
       <h1>
         Hi!
-        <object data="media/smiley.svg" type="image/svg+xml" class="smiley" width="48" height="48" alt="smiley"> </object>
+        <object data="media/smiley.svg" type="image/svg+xml" class="smiley" width="48" height="48" alt="smiley"></object>
       </h1>
       <p>I'm Stefan, I study Computing at Imperial College London</p>
       <ul id="menu">
@@ -83,15 +65,16 @@ function getRandomVideo() {
         </video>
       </div>
       </p>
-      <p>
+      <p id="videoIntroduction">
       Here's a cute video for you:
       </p>
-      <script type="text/javascript">
-        document.write(getRandomVideo());
-      </script>
+      <div class="videoContainer">
+        <video id="randomVideo" controls loop>
+        </video>
+      </div>
       <div id="footer">
         <object data="media/smiley.svg" type="image/svg+xml" class="smiley" width="48" height="48" alt="smiley"></object>
       </div>
     </div>
-  </body>
+      </body>
 </html>
