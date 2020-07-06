@@ -1,14 +1,16 @@
 var videos = [
   "kitten"
   , "parrot"
-  , "birb"
   , "cuddles"
-  , "petting"
   , "kittenSlide"
   , "bulldog"
   , "ocelot"
   , "cheetahs"
   , "walkin"]
+
+  // videos temporarily disabled due to macos chrome issues:
+  // "birb"
+  // "petting"
 
 function getRandomVideo() {
   const path = "media/";
