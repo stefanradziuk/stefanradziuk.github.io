@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>😻</title>
+    <style>
+  /* CodePen styles */
+  body {
+    font-size: 15em;
+    margin: 30px;
+  }
+  
+  /* Demo styles */
+  .z-text {
+    animation: wobble 10s ease-in-out infinite;
+    transform: rotateX(30deg) rotateY(-30deg);
+  }
+  
+  .z-layer {
+     filter: brightness(0.7);
+  }
+  
+  .z-layer:first-child {
+     filter: brightness(1);
+  }
+  
+  @keyframes wobble {
+    0%, 100% {
+      transform: rotate3d(0, 1, 0, 30deg);
+    }
+    25% {
+      transform: rotate3d(-1, 1, 1, 40deg);
+    }
+    50% {
+      transform: rotate3d(1, 0, 0, 180deg);
+    }
+    75% {
+      transform: rotate3d(-1, -1, 0, 130deg);
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <span data-z data-z-layers="22" data-z-depth="40px">😻</span>
+    <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
+  </body>
+</html>
