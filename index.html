@@ -91,16 +91,36 @@ img {
   user-drag: none;
 }
 
-.videoContainer {
+.mediaContainer {
   width: 100%;
   margin-bottom: 1em;
   text-align: center;
 }
 
-video {
+.media {
   max-width: 60%;
   display: block;
   margin: 0 auto;
+}
+
+.iframeContainer {
+  width: 100%;
+  padding-top: 50%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px;
 }
 
 a:link {
@@ -247,7 +267,7 @@ a:active {
       <hr/>
 
       <p>
-      <a href="https://wacc.radzi.uk/">WACC Compiler</a> – compiler for a simple While-based language (extended with some fp-flavoured features!), written in Scala and compiled to JavaScript. You can <a href="https://wacc.radzi.uk/">try it out from the comfort of your browser!</a>
+      <a href="https://wacc.radzi.uk/">WACC Compiler</a> – compiler for a simple While-based language (extended with some fp-flavoured features!). Written in Scala and compiled to JavaScript. You can <a href="https://wacc.radzi.uk/">try it out from the comfort of your browser!</a>
       </p>
 
       <hr/>
@@ -255,10 +275,8 @@ a:active {
       <p>
       <!-- TODO -->
       <a href="https://rbn.radzi.uk/">Random Boolean Networks</a> – visualise a randomly generated network of boolean nodes and observe how its iterations eventually fall into a cycle.
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
-          <source src="qewr.mp4" type="video/mp4">
-        </video>
+      <div class="mediaContainer">
+        <img src="media/rbn.png" class="media"></img>
       </div>
       </p>
 
@@ -266,10 +284,10 @@ a:active {
 
       <p>
       <a href="https://bishop.radzi.uk/">Drunken Bishop animation</a> – a randomly generated screensaver-like animation inspired by OpenSSH's key visualisation.
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
-          <source src="qewr.mp4" type="video/mp4">
-        </video>
+      <div class="mediaContainer">
+        <div class="iframeContainer">
+          <iframe src="https://bishop.radzi.uk/"></iframe>
+        </div>
       </div>
       </p>
 
@@ -277,8 +295,8 @@ a:active {
 
       <p>
       <a href="https://github.com/ic-pcg/waveFunctionCollapse">Wave Function Collapse</a> – my colleagues and I implemented <a href="https://github.com/mxgmn/WaveFunctionCollapse">Maxim Gumin's WFC algorithm</a> in C as part of Imperial's First Year C project.
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
+      <div class="mediaContainer">
+        <video playsinline autoplay muted loop class="media">
           <source src="media/wfc_demo.mp4" type="video/mp4">
         </video>
       </div>
@@ -288,8 +306,8 @@ a:active {
 
       <p>
       <a href="https://github.com/stefanradziuk/population_simulator/">Population simulator</a> – an epidemic simulator I made in Python to visualise how exponential growth arises when observing spread of infectious diseases.
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
+      <div class="mediaContainer">
+        <video playsinline autoplay muted loop class="media">
           <source src="media/population_simulator_demo.mp4" type="video/mp4">
         </video>
       </div>
@@ -300,8 +318,8 @@ a:active {
       <p id="videoIntroduction">
       Here's a cute video for you:
       </p>
-      <div class="videoContainer">
-        <video id="randomVideo" controls loop>
+      <div class="mediaContainer">
+        <video id="randomVideo" controls loop class="media">
         </video>
       </div>
       <div id="footer">
