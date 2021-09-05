@@ -29,7 +29,7 @@ body {
   background-color: var(--background);
   font-family: var(--sans);
   font-weight: 400;
-  font-size: calc(3em + 1vw);
+  font-size: calc(0.7 * (3em + 1vw));
   transition: background-color 0.5s ease-out, color 0.5s ease-out;
 }
 
@@ -50,7 +50,7 @@ p {
 }
 
 #container {
-  max-width: min(900px, 90%);
+  max-width: min(700px, 90%);
   margin: 0 auto;
   padding: 20px 50px 20px 50px;
 }
@@ -89,7 +89,7 @@ img {
 }
 
 video {
-  max-width: 100%;
+  max-width: 60%;
   display: block;
   margin: 0 auto;
 }
@@ -152,7 +152,7 @@ a:active {
 
 @media(hover) {
   body {
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.8 * (1em + 1vw));
   }
 
   video {
@@ -187,7 +187,7 @@ a:active {
 }
 
 @keyframes fade-in {
-  10%, 90% { 
+  10%, 90% {
     opacity: 0.6;
   }
 }
@@ -231,6 +231,9 @@ a:active {
             stefan@radzi.uk</a>
         </li>
       </ul>
+      <p>
+        Here are a few project I've been working on:
+      </p>
       <p>
       Have a look at how my colleagues and I <a href="https://github.com/ic-pcg/waveFunctionCollapse">implemented the wave function collapse algorithm in C</a>
       <div class="videoContainer">
