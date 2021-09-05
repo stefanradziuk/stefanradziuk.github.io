@@ -29,13 +29,22 @@ body {
   background-color: var(--background);
   font-family: var(--sans);
   font-weight: 400;
-  font-size: calc(3em + 1vw);
+  font-size: calc(0.7 * (3em + 1vw));
   transition: background-color 0.5s ease-out, color 0.5s ease-out;
 }
 
 .dark-mode {
   background-color: var(--primary);
   color: var(--background);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--primary);
+  color: var(--primary);
+  overflow: visible;
+  text-align: center;
+  width: 96%;
 }
 
 h1 {
@@ -50,7 +59,7 @@ p {
 }
 
 #container {
-  max-width: min(900px, 90%);
+  max-width: min(700px, 90%);
   margin: 0 auto;
   padding: 20px 50px 20px 50px;
 }
@@ -82,16 +91,36 @@ img {
   user-drag: none;
 }
 
-.videoContainer {
+.mediaContainer {
   width: 100%;
   margin-bottom: 1em;
   text-align: center;
 }
 
-video {
-  max-width: 100%;
+.media {
+  max-width: 60%;
   display: block;
   margin: 0 auto;
+}
+
+.iframeContainer {
+  width: 100%;
+  padding-top: 50%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px;
 }
 
 a:link {
@@ -152,7 +181,7 @@ a:active {
 
 @media(hover) {
   body {
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.8 * (1em + 1vw));
   }
 
   video {
@@ -172,8 +201,8 @@ a:active {
 }
 
 .smiley {
-	min-height: 1.3em;
-	min-width: 1.3em;
+  min-height: 1.3em;
+  min-width: 1.3em;
   float: right;
 }
 
@@ -187,7 +216,7 @@ a:active {
 }
 
 @keyframes fade-in {
-  10%, 90% { 
+  10%, 90% {
     opacity: 0.6;
   }
 }
@@ -232,26 +261,65 @@ a:active {
         </li>
       </ul>
       <p>
-      Have a look at how my colleagues and I <a href="https://github.com/ic-pcg/waveFunctionCollapse">implemented the wave function collapse algorithm in C</a>
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
+        Here are a few projects I've been working on:
+      </p>
+
+      <hr/>
+
+      <p>
+      <a href="https://wacc.radzi.uk/">WACC Compiler</a> – compiler for a simple While-based language (extended with some fp-flavoured features!). Written in Scala and compiled to JavaScript. You can <a href="https://wacc.radzi.uk/">try it out from the comfort of your browser!</a>
+      </p>
+
+      <hr/>
+
+      <p>
+      <!-- TODO -->
+      <a href="https://rbn.radzi.uk/">Random Boolean Networks</a> – visualise a randomly generated network of boolean nodes and observe how its iterations eventually fall into a cycle.
+      <div class="mediaContainer">
+        <img src="media/rbn.png" class="media"></img>
+      </div>
+      </p>
+
+      <hr/>
+
+      <p>
+      <a href="https://bishop.radzi.uk/">Drunken Bishop animation</a> – a randomly generated screensaver-like animation inspired by OpenSSH's key visualisation.
+      <div class="mediaContainer">
+        <div class="iframeContainer">
+          <iframe src="https://bishop.radzi.uk/"></iframe>
+        </div>
+      </div>
+      </p>
+
+      <hr/>
+
+      <p>
+      <a href="https://github.com/ic-pcg/waveFunctionCollapse">Wave Function Collapse</a> – my colleagues and I implemented <a href="https://github.com/mxgmn/WaveFunctionCollapse">Maxim Gumin's WFC algorithm</a> in C as part of Imperial's First Year C project.
+      <div class="mediaContainer">
+        <video playsinline autoplay muted loop class="media">
           <source src="media/wfc_demo.mp4" type="video/mp4">
         </video>
       </div>
       </p>
+
+      <hr/>
+
       <p>
-      Check out the epidemic simulator I made in Python <a href="https://github.com/stefanradziuk/population_simulator/">over&nbsp;here</a>
-      <div class="videoContainer">
-        <video playsinline autoplay muted loop>
+      <a href="https://github.com/stefanradziuk/population_simulator/">Population simulator</a> – an epidemic simulator I made in Python to visualise how exponential growth arises when observing spread of infectious diseases.
+      <div class="mediaContainer">
+        <video playsinline autoplay muted loop class="media">
           <source src="media/population_simulator_demo.mp4" type="video/mp4">
         </video>
       </div>
       </p>
+
+      <hr/>
+
       <p id="videoIntroduction">
       Here's a cute video for you:
       </p>
-      <div class="videoContainer">
-        <video id="randomVideo" controls loop>
+      <div class="mediaContainer">
+        <video id="randomVideo" controls loop class="media">
         </video>
       </div>
       <div id="footer">

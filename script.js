@@ -16,7 +16,7 @@ function getRandomVideo() {
   const path = "media/";
   const fileExtension = ".mp4";
   const randomVid = videos[Math.floor(Math.random() * videos.length)];
-  console.log(`Enjoying the video of ${randomVid}?`);
+  console.log(`Math.random() thought you'd enjoy the ${randomVid} video`);
   return path + randomVid + fileExtension;
 }
 
