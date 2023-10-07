@@ -3,117 +3,29 @@
   <head>
     <title>Stefan Radziuk</title>
     <meta charset="UTF-8">
-    <meta property="og:url" content="https://stefan.radzi.uk/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Stefan Radziuk"/>
-    <meta property="og:description" content="Hi! I'm a Computing student at Imperial College London"/>
-    <meta property="og:image" content="https://stefan.radzi.uk/media/thumbnail.png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <meta name="description" content="Hi! I'm a Computing student at Imperial College London">
-    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=.5">
     <style>
-:root {
-  --background: #fafafa;
-  --primary: #111;
-  --accent: #5762d5;
-  --accent-transparent: rgba(87, 98, 213, .99);
-  --gray: #ddd;
-
-  --sans: 'Montserrat', sans-serif;
-  --serif: 'Merriweather', serif;
-}
-
 body {
-  color: var(--primary);
-  background-color: var(--background);
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: calc(0.7 * (3em + 1vw));
-  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  font-family: monospace;
+  font-size: 150%;
+  line-height: 1.6;
 }
 
-.dark-mode {
-  background-color: var(--primary);
-  color: var(--background);
-}
-
-hr {
-  border: none;
-  border-top: 1px solid var(--primary);
-  color: var(--primary);
-  overflow: visible;
-  text-align: center;
-  width: 96%;
-}
-
-.dark-mode hr {
-  border-top: 1px solid var(--background);
-}
-
-h1 {
-  font-size: 120%;
-  font-weight: 900;
-  font-family: var(--serif);
-}
-
-p {
-  font-size: 85%;
+h1,h2,h3 {
   line-height: 1.2;
 }
 
-#container {
-  max-width: min(700px, 90%);
-  margin: 0 auto;
-  padding: 20px 50px 20px 50px;
+/* https://jrl.ninja/etc/1 */
+main {
+  max-width: 54rem;
+  padding: 2rem;
+  margin: auto;
 }
 
-#menu {
-  list-style: none;
-  font-weight: 900;
-  font-family: var(--serif);
-  display: flex;
-  flex-direction: column;
-}
-
-.separator {
-  display: none;
-}
-
-#footer {
-  font-size: 70%;
-  padding-top: 1em;
-  padding-bottom: 4em;
-}
-
-img {
-  width: 100%;
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-}
-
-.mediaContainer {
-  width: 100%;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.media {
-  max-width: 60%;
-  display: block;
-  margin: 0 auto;
-}
-
-.iframeContainer {
-  max-width: 60%;
-  padding-top: 50%;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
+/* https://maxbittker.github.io/broider/ */
+.broider {
+      border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAi5JREFUeF7tndFuwkAMBOH/P7oVUh/KlbI5exJyMH01Wa8n6xNpVPV68QclcEXVFLsIFA6BQAUKE4DlTKhAYQKwnAn9QKBfw8ynDsGpzf2AFCi8RQIV6ByBlJhUH7vNfr57feqX6k9pVc7Q1DDVu0C61yd/qS7QgUACluoCPTvQ7sqlE3tMSPp85dj6rdlK5Giua+amhxp6oCfQRCDUTSj8aPhxQOkVT4Feql/lDF1qwHS3HtRb8wn0L1GBFlL47JLDgcL+30uusvLvRQCeRqAChQnAciZUoDABWM6EChQmAMtVEtr64gv730OuNZ9AP/DRc48UnurRs7USR9Mp9GvNV1n50WPLQGFg+hLUv0Dhd2ICFSi98exb2y0JTWdMeqm2pQdO6YngrN80/12rLcMmwVmDR8J71GvWb5pfoOGOjiETaAD28oSmFZ26g0nsBXXU/5YzNM2IGkrNdqij/gXq91A8oy9PKGoAx9MXbM1XWflWw/68uyu05hOov2B+v4TuPtHKDSorv/K8u3sXKIxYoAKFCcByJlSgMAFYzoSeAGjr0azgf6l+lYQuNeDRN1CgH/gsv9RGVBI63lN64PQSbezfnQH13zVzGw415N/LC/RuY0woHIgK0LTiqU6fwXS/Wb12QlPDVBfoQCABS3WBCnT781blDN2uznxyNvFM16KKQIvg/rtMoAI99z8zWCGhcIb2lRMozFegAoUJwHImVKAwAVjOhAoUJgDLfQMI+phVxrrNtgAAAABJRU5ErkJggg==") 28 /  28px / 0 round;
+          border-width:  28px;
+              border-style:  solid;
 }
 
 iframe {
@@ -127,209 +39,58 @@ iframe {
   border: 0px;
 }
 
-a:link {
-  color: var(--primary);
-  font-weight: 900;
-  font-family: var(--serif);
-  text-decoration: none;
-  transition: color 0.5s ease-out;
+a {
+  color: inherit;
 }
 
 a:visited {
-  color: inherit;
   text-decoration: none;
-}
-
-.dark-mode a:link {
-  color: var(--background);
 }
 
 a:hover {
   text-decoration: none;
-  color: var(--accent);
-}
-
-.dark-mode a:hover {
-  color: var(--accent);
 }
 
 a:active {
   text-decoration: none;
 }
-
-*:focus {
-  outline-style: none;
-}
-
-::selection {
-  background: var(--accent-transparent);
-  color: var(--background);
-}
-
-::-moz-selection {
-  background: var(--accent-transparent);
-  color: var(--background);
-}
-
-::-webkit-scrollbar {
-  width: auto;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gray);
-}
-
-@media(hover) {
-  body {
-    font-size: calc(0.8 * (1em + 1vw));
-  }
-
-  video {
-    max-height: 600px;
-  }
-
-  #menu {
-    display: flex;
-    flex-direction: row;
-    item-width: 100%;
-    justify-content: space-between;  /* flex-start */
-  }
-
-  .separator {
-    display: inline;
-  }
-}
-
-.smiley {
-  min-height: 1.3em;
-  min-width: 1.3em;
-  float: right;
-}
-
-.psst {
-  position: relative;
-  top: 6em;
-  font-size: 40%;
-  opacity: 0;
-  float: right;
-  animation: 5s ease-out 2.5s fade-in;
-}
-
-@keyframes fade-in {
-  10%, 90% {
-    opacity: 0.6;
-  }
-}
-
     </style>
-    <link rel="icon" href="media/favicon_black.png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    </noscript>
-    <script type="text/javascript" src="script.js" async></script>
   </head>
-  <body onload="writeRandomVideo();">
-    <div id="container">
-      <span class="psst">
-        psst! check out the dark mode
-      </span>
-      <h1>
-        Hi!
-        <object data="media/smiley.svg" type="image/svg+xml" class="smiley" width="48" height="48" alt=""></object>
-      </h1>
-      <p>I'm Stefan, I'm a 3rd year MEng Computing student at Imperial College London.</p>
-      <ul id="menu">
+  <body>
+    <main class="broider">
+      <p>
+      <b>
+        <a href="mailto:stefan@radzi.uk">stefan@radzi.uk</a>
+      </b>
+      &#183;
+      <a href="https://github.com/stefanradziuk">GitHub</a>
+      &#183;
+      <a href="https://www.linkedin.com/in/stefanradziuk/">LinkedIn</a>
+      </p>
+
+      Some things I've worked on:
+
+      <ul>
         <li>
-          <a href="StefanRadziukCv.pdf" target="_blank">
-            cv</a>
+          <a href="https://kidneycaliper.compath.co.uk">kidneycaliper.compath.co.uk</a>
+          &#8211; medical image analysis pipeline
         </li>
-        <span class="separator">\</span>
+
         <li>
-          <a href="https://github.com/stefanradziuk" target="_blank" rel="noopener">
-            gitHub</a>
+          <a href="https://wacc.radzi.uk/">wacc.radzi.uk</a>
+          &#8211; in-browser WACC compiler
         </li>
-        <span class="separator">\</span>
+
         <li>
-          <a href="https://linkedin.com/in/stefanradziuk" target="_blank" rel="noopener">
-            linkedIn</a>
+          <a href="https://rbn.radzi.uk/">rbn.radzi.uk</a>
+          &#8211; random boolean networks
         </li>
-        <span class="separator">\</span>
+
         <li>
-          <a href="mailto:stefan@radzi.uk">
-            stefan@radzi.uk</a>
+          <a href="https://bishop.radzi.uk/">bishop.radzi.uk</a>
+          &#8211; OpenSSH-inspired animation
         </li>
       </ul>
-      <p>
-        Here are a few projects I've been working on:
-      </p>
-
-      <hr/>
-
-      <p>
-      <a href="https://kidneycaliper.lucidifai.com/past-runs/">KidneyCaliper</a> – a deep-learning based tool that provides pathologists with a comprehensive kidney biopsy analysis.
-      <div class="mediaContainer">
-        <a href="https://kidneycaliper.lucidifai.com/past-runs/">
-          <img src="media/kidneycaliper.jpeg" class="media"></img>
-        </a>
-      </div>
-      </p>
-
-      <hr/>
-
-      <p>
-      <a href="https://wacc.radzi.uk/">WACC Compiler</a> – compiler for a simple While-based language (extended with some fp-flavoured features!). Written in Scala and compiled to JavaScript. You can <a href="https://wacc.radzi.uk/">try it out from the comfort of your browser!</a>
-      </p>
-
-      <hr/>
-
-      <p>
-      <a href="https://rbn.radzi.uk/">Random Boolean Networks</a> – visualise a randomly generated network of boolean nodes and observe how its iterations eventually fall into a cycle.
-      <div class="mediaContainer">
-        <a href="https://rbn.radzi.uk/">
-          <img src="media/rbn.png" class="media"></img>
-        </a>
-      </div>
-      </p>
-
-      <hr/>
-
-      <p>
-      <a href="https://bishop.radzi.uk/">Drunken Bishop animation</a> – a randomly generated screensaver-like animation inspired by OpenSSH's key visualisation.
-      <div class="mediaContainer">
-        <div class="iframeContainer">
-          <iframe src="https://bishop.radzi.uk/"></iframe>
-        </div>
-      </div>
-      </p>
-
-      <hr/>
-
-      <p>
-      <a href="https://github.com/ic-pcg/waveFunctionCollapse">Wave Function Collapse</a> – my colleagues and I implemented <a href="https://github.com/mxgmn/WaveFunctionCollapse">Maxim Gumin's WFC algorithm</a> in C as part of Imperial's First Year C project.
-      <div class="mediaContainer">
-        <video playsinline autoplay muted loop class="media">
-          <source src="media/wfc_demo.mp4" type="video/mp4">
-        </video>
-      </div>
-      </p>
-
-      <hr/>
-
-      <p id="videoIntroduction">
-      Here's a cute video for you:
-      </p>
-      <div class="mediaContainer">
-        <video id="randomVideo" controls loop class="media">
-        </video>
-      </div>
-      <div id="footer">
-        <object data="media/smiley.svg" type="image/svg+xml" class="smiley" width="48" height="48" alt=""></object>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
